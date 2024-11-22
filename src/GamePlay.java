@@ -128,7 +128,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.black);
         g.fillRect(1,1,692, 592);
         map.draw((Graphics2D) g);
-        g.setColor(Color.yellow);
+        g.setColor(Color.orange);
         g.fillRect(0, 0, 3, 592);
         g.fillRect(0, 0, 692, 3);
         g.fillRect(691, 0, 3, 592);
@@ -137,17 +137,17 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.setFont(new Font("serif", Font.BOLD, 25));
         g.drawString(""+score, 590, 30);
 
-        g.setColor(Color.yellow);
+        g.setColor(Color.orange);
         g.fillRect(playerX,550,100,8);
 
-        g.setColor(Color.GREEN);
+        g.setColor(Color.red);
         g.fillOval(ballPosX,ballPosY,20,20);
 
         if(ballPosY > 570){
             play = false;
             ballXDir = 0;
             balYDir = 0;
-            g.setColor(Color.red);
+            g.setColor(Color.white);
             g.setFont(new Font("serif", Font.BOLD,30));
             g.drawString("Game Over! Score : "+score,190,300);
             g.setFont(new Font("serif",Font.BOLD,30));
